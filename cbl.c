@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <openssl/bn.h>
+//#include <openssl/bn.h>
 #define NBITS 256
 void printBN(char *msg, BIGNUM * a)
 {
