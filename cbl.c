@@ -25,7 +25,7 @@ BIGNUM *n = BN_new();
 
 BN_mul(n, p, q, ctx);
 
-BIGNUM *totient = BN_new();
+BIGNUM *fi = BN_new();
 BIGNUM *p_minus_one = BN_new();
 BIGNUM *q_minus_one = BN_new();
 
@@ -35,11 +35,11 @@ BN_hex2bn(&one, "1");
 BN_sub(p_minus_one, p, one);
 BN_sub(q_minus_one, q, one);
 
-BN_mul(totient, p_minus_one, q_minus_one, ctx);
-printBN("totient = (p-1)*(q-1) = ", totient);
+BN_mul(fi, p_minus_one, q_minus_one, ctx);
+printBN("fi = (p-1)*(q-1) = ", totient);
 
 BIGNUM *d = BN_new();
 
-BN_mod_inverse(d,e,totient, ctx);
+BN_mod_inverse(d,e,fi, ctx);
 printBN("private key d = ", d);
 }
