@@ -36,7 +36,7 @@ BN_sub(p_minus_one, p, one);
 BN_sub(q_minus_one, q, one);
 
 BN_mul(fi, p_minus_one, q_minus_one, ctx);
-printBN("fi = (p-1)*(q-1) = ", totient);
+printBN("fi = (p-1)*(q-1) = ", fi);
 
 BIGNUM *d = BN_new();
 
