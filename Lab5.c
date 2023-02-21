@@ -25,7 +25,7 @@ BN_hex2bn(&e, "010001");
   
 BN_mod_exp(message, s, e, n, ctx);  
   
-//python -c 'print("THE HEX YOU GOT FROM OUTPUT").decode("hex")'
+//python3 -c 'print(bytes.fromhex("4C61756E63682061206D697373696C652E").decode())'
   
 printBN("Message = ", message);
   
