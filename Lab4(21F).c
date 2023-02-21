@@ -25,6 +25,7 @@ BN_hex2bn(&d, "74D806F9F3A62BAE331FFE3F0A68AFE35B3D2E4794148AACBC26AA381CD7D30D"
   
 BN_hex2bn(&m, "49206f77652024333030302e");
   
+  BN_mod_exp(sign, m, d, n, ctx); 
   printBN("signed Message = ", sign);
   
   return 0;
